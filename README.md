@@ -19,6 +19,25 @@
 3. 기대효과
 > 오픈소스 기반의 영상공유 플랫폼을 개발하여 영상처리에 대한 응용기술 확보 및 다양한 영상관제시스템에 활용 가능
 
+## Project
+Name : Infrared Camera Sensing System Based on Artificial Intelligence
+
+## Our Partner Company
+Company : JC RADAR Inc.
+
+## Project Keyword.
+1. Object Recognition - YOLO
+2. Intent Classification  - YOLO
+3. Camera Control
+4. Change Monochrome Photo to Color Photo - GaN
+
+## Merits of Our Project
+1. High Recognition Rate
+2. Intent Classification
+3. Increase Camera Quality
+4. Camera Remote Control
+5. Change Monochrome Image to Color Image
+
 ## CONTENT
 System Diagram
 ![image](https://github.com/Azderica/CPL-20162-Team7/blob/master/image/overview.png)
