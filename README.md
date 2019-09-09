@@ -18,3 +18,7 @@
 
 3. 기대효과
 > 오픈소스 기반의 영상공유 플랫폼을 개발하여 영상처리에 대한 응용기술 확보 및 다양한 영상관제시스템에 활용 가능
+
+## CONTENT
+System Diagram
+![image](https://github.com/Azderica/CPL-20162-Team7/blob/master/image/overview.png)
