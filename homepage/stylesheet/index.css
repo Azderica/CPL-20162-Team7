@@ -1,0 +1,177 @@
+/*------------------- 초기화 선언 -------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------- 초기화 선언 -------------------*/
+
+html{
+	margin: 1em;
+}
+
+body{
+    background-color: #000B29;
+    color: white;
+	width: 100%;
+	font-family: 'Arial';
+}	
+
+.up{
+	display: block;
+	font-weight: bold;
+	margin: 0.5em auto;
+	text-transform: uppercase;
+
+	font-size: 1.5em;
+	width: 100%;
+	line-height: 30px;
+	margin-bottom: 1em;
+}
+
+.mid{
+	display: flex;
+	margin: 0.5em auto;
+}
+
+.select_bar{
+	border: 1px solid #000B29;
+	width: 200px;
+	height: 400px;
+	display: inline-block;
+}
+
+.camera_button{
+	display: block;	
+	
+	background: none;
+	border: 1spx solid #fff;
+	border-radius: 5px;
+	color: #fff;
+
+	font-size: 12px;
+	font-weight: bold;
+	margin: 1em auto;
+	padding: 1.5em 4em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.camera_button::before,
+.camera_button::after {
+	background: #fff;
+	content: '';
+	z-index: -1;
+}
+
+.camera_button:hover {
+	color: #d70026;
+}
+  
+  /* BUTTON 1 */
+.camera_button::after {
+	height: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+  
+.camera_button:hover:after {
+	height: 100%;
+}
+
+.main{
+    border: 5px solid #f8f5f2;
+	background-color: black;
+	width: 100%;
+	display: inline-block;	
+	
+	border-radius: 0.5em;
+}
+
+.user_state{
+	line-height: 30px;
+}
+
+.mid_content{
+	text-align: center;
+}
+
+.mid_cctv{
+}
+
+.mid_cctv_info{
+	line-height: 30px;
+	background-color: #f8f5f2;
+	color: #000B29;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+}
+
+.img_line{
+	
+}
+
+.img_content{
+	width: 34%;
+	text-align: 34%;
+}
+
+.mid_info{
+	line-height: 30px;
+	background-color: #f8f5f2;
+	color: #000B29;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+}
+
+.bot{
+	font-size: 12px;
+	text-align: right;
+}
