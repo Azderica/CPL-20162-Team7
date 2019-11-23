@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.IBinder;
+import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 
 import java.io.IOException;
@@ -21,10 +22,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyService extends Service {
     ArrayList<ResultData> items = new ArrayList<>();
+    public static int run = 0;
     Retrofit retrofit;
     int num = 0;
     MyGlobals.RetrofitExService retrofitExService;
     Mythread t1;
+    private Vibrator vibrator;
+
+
     public MyService() {
     }
 
@@ -40,6 +45,7 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
         super.onStartCommand(intent, flags, startId);
         String Channel_id = "channel_1";
         if(Build.VERSION.SDK_INT >= 26) {
@@ -58,15 +64,26 @@ public class MyService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        t1.stop();
-        t1 = null;
+        System.out.println("서비스 destroy");
+        if(run == 1) {
+            t1 = null;
+            System.out.println("stop 전");
+            System.out.println("stop 후");
+            run = 0;
+        }
     }
 
 
     class Mythread extends Thread{
         public void run(){
+            run = 1;
             System.out.println("Mythread 실행");
             while (true) {
+                System.out.println("while문");
+                if(run == 0) {
+                    System.out.println("if run");
+                    break;
+                }
                 System.out.println("while문 안");
                 if (MyGlobals.getInstance().getRetrofit() == null || MyGlobals.getInstance().getRetrofitExService() == null) {
                     retrofit = new Retrofit.Builder().baseUrl(MyGlobals.RetrofitExService.URL).addConverterFactory(GsonConverterFactory.create()).build();
@@ -108,6 +125,7 @@ public class MyService extends Service {
                     builder.setAutoCancel(true);
                     builder.setNumber(999);
                     notiManager.notify(num,builder.build());
+                    vibrator.vibrate(1000);
                     num++;
                 }catch(IOException e){
                     e.printStackTrace();
@@ -120,6 +138,7 @@ public class MyService extends Service {
                 }
 
             }
+            System.out.println("쓰레드 종료");
         }
     }
 }
