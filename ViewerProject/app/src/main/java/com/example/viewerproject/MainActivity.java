@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,6 +24,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 import retrofit2.Retrofit;
 
@@ -29,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private Button on;
     private EditText editText;
     private Button left, right,up,down;
+    private Spinner spinner;
+    private ArrayAdapter arrayAdapter;
     String Uri;
     String s_ip = "220.66.219.242"; // 서버 ip
     String ip = ""; //라즈베리파이 ip
@@ -63,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         down = (Button)findViewById(R.id.down);
         webView = (WebView)findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
-
-
 
 
 
@@ -140,6 +144,22 @@ public class MainActivity extends AppCompatActivity {
                 new MyClient().execute();
             }
         });
+
+        /* Myeonghun edit */
+        ArrayList Spinner_arrayList = new ArrayList<>();
+        Spinner_arrayList.add("Camera 1");
+        Spinner_arrayList.add("Camera 2");
+        Spinner_arrayList.add("Camera 3");
+        Spinner_arrayList.add("Camera 4");
+        Spinner_arrayList.add("Camera 5");
+        Spinner_arrayList.add("Camera 6");
+
+        spinner = (Spinner)findViewById(R.id.spinner2);
+
+        arrayAdapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,Spinner_arrayList);
+
+        spinner.setAdapter(arrayAdapter);
+
     }
 
     public void onClick(View v){

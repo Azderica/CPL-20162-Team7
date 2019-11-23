@@ -4,38 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000b29"
     android:orientation="vertical"
-    android:weightSum="8"
+    android:weightSum="10"
     tools:context=".MainActivity">
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="7"
         android:orientation="vertical"
-        android:weightSum="6">
+        android:weightSum="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="Y"
+                android:textColor="#f8f5f2"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="S"
+                android:textColor="#ed883d"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="EE"
+                android:textColor="#f8f5f2"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#f8f5f2"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+            </Spinner>
+
+        </LinearLayout>
 
         <WebView
             android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5"/>
+            android:layout_weight="6" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Camera 1"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:textColor="#f8f5f2"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:weightSum="6">
+
             <EditText
-                android:id= "@+id/url"
+                android:id="@+id/url"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:textSize="16dp"
-                android:hint="url"/>
+                android:hint="url"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#f8f5f2" />
+
             <Button
                 android:id="@+id/on"
                 android:layout_width="0dp"
@@ -43,6 +109,7 @@
                 android:layout_weight="1"
                 android:text="ON">
             </Button>
+
         </LinearLayout>
 
     </LinearLayout>
@@ -50,83 +117,78 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
         android:layout_marginTop="10dp"
-        android:weightSum="8"
-        android:orientation="vertical">
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="6">
 
-            <LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="6"
-            android:layout_marginTop="30dp"
-            android:orientation="vertical"
-            android:weightSum="6">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/original"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClick"
-                    android:text="original" />
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/black"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClick"
-                    android:text="black" />
+            <Button
+                android:id="@+id/original"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="original" />
 
-                <Button
-                    android:id="@+id/color"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClick"
-                    android:text="color" />
+            <Button
+                android:id="@+id/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="black" />
 
-                <Button
-                    android:id="@+id/yolo"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClick"
-                    android:text="yolo" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="color" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/start"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="알림받기"></Button>
-
-                    <Button
-                        android:id="@+id/stop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="알림끄기"></Button>
-                </LinearLayout>
-
+            <Button
+                android:id="@+id/yolo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="yolo" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="알림받기"></Button>
+
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="알림끄기"></Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="2"
             android:orientation="horizontal">
 
             <Button
@@ -134,29 +196,31 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="up"/>
+                android:text="up" />
 
             <Button
                 android:id="@+id/down"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="down"/>
+                android:text="down" />
 
             <Button
                 android:id="@+id/left"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="left"/>
+                android:text="left" />
 
             <Button
                 android:id="@+id/right"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="right"/>
-            </LinearLayout>
+                android:text="right" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 

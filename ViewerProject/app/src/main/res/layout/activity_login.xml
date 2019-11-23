@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".LoginActivity"
-    android:weightSum="10">
+    android:weightSum="10"
+    android:background="@drawable/login"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,12 +17,45 @@
         android:orientation="vertical"
         android:layout_weight="6">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Y"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textColor="#f8f5f2"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="S"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textColor="#ed883d"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="EE"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textColor="#f8f5f2"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -29,21 +64,28 @@
         android:orientation="vertical"
         android:layout_weight="3"
         android:weightSum="3">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="140px"
                 android:layout_height="wrap_content"
-                android:text="아이디"/>
+                android:gravity="center"
+                android:text="ID"
+                android:textColor="#f8f5f2" />
 
             <EditText
                 android:id="@+id/id"
-                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#f8f5f2" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -52,16 +94,22 @@
             android:layout_weight="1"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="140px"
                 android:layout_height="wrap_content"
-                android:text="비밀번호"/>
+                android:text="PW"
+                android:gravity="center"
+                android:textColor="#f8f5f2" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="#f8f5f2"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -77,7 +125,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="LOGIN" />
+                android:text="LOGIN"
+                android:background="#000b29"
+                android:textColor="#f8f5f2"/>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -85,4 +136,5 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
 </LinearLayout>
