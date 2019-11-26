@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private Button left, right,up,down;
     private Spinner spinner;
     private ArrayAdapter arrayAdapter;
+    public static TextView textView;
     String Uri;
     String s_ip = "220.66.219.242"; // 서버 ip
     String ip = ""; //라즈베리파이 ip
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     MyGlobals.RetrofitExService retrofitExService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        textView = (TextView)findViewById(R.id.object);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         LoginActivity.activity.finish();

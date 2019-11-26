@@ -36,9 +36,9 @@ public class MyGlobals {
     }
 
     public interface RetrofitExService{
-        public static final String URL = "http://52.78.45.74:9000";
+        public static final String URL = "http://20.20.0.82:5000";
 
-        @GET("get/information")
+        @GET("/get/information")
         Call<ResultData> getData();
 
     }
