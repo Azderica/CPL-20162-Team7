@@ -41,3 +41,6 @@ Company : JC RADAR Inc.
 ## CONTENT
 System Diagram
 ![image](https://github.com/Azderica/CPL-20162-Team7/blob/master/image/overview.png)
+
+## Introduction Video
+https://youtu.be/SKkaBqI-i_k
